@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Max Watch</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="containers">
+        <div class="max">
+       
+          <div><h1 class="logo">Max</h1></div>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-toggle" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="nav-menu">
+            <li><a class="nav-link" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#products">Features</a></li>
+            <li><a class="nav-link" href="#cart-modal">Cart</a></li>
+            <li><a class="nav-link" href="#formContainer">Login/Signup</a></li>
+            <li><a class="nav-link" id="profileLink" href="#">Profile</a></li>
+            <li class="cart-icon">
+              <a class="nav-link" href="#cart-modal">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <p class="cart-count">0</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Profile Modal -->
+    <div id="profileModal" class="modals">
+      <div class="modals-content">
+        <span class="close" id="closeProfileModal">&times;</span>
+        <h2>User Profile</h2>
+        <p><strong>Name:</strong> <span id="profileName"></span></p>
+        <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+        <button id="logoutBtn">Logout</button>
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="containerrs">
+        <div>
+          <h1>Welcome to MaxWatches</h1>
+          <h4>Best Watches to Sale</h4>
+          <p>Find the best deals on the latest Watches.</p>
+          <a href="#products" class="cta-btn">Shop Now</a>
+        </div>
+
+        <div>
+          <img
+            src="assests/header.png"
+            alt="header"
+            width="200px"
+            height="250px"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+      <div class="containerer">
+        <h2 class="featuredphones">Featured Watches</h2>
+        <div class="product-list">
+          <div class="product-item">
+            <img src="assests/image1.jpeg" alt="Phone 1" class="styled-image" />
+            <h3>HAND WATCH</h3>
+            <p>$699</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product-item">
+            <img src="assests/image2.webp" alt="Phone 2" class="styled-image" />
+            <h3>LUXURY WATCH</h3>
+            <p>$799</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product-item">
+            <img src="assests/image3.jpeg" alt="Phone 3" class="styled-image" />
+            <h3>CITIZEN</h3>
+            <p>$899</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="assests/image4.webp"
+              alt="Phone 4"
+              class="styled-image"
+            />
+            <h3>ROLEX</h3>
+            <p>$1899.05</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product-item">
+            <img
+              src="assests/image5.jpeg"
+              alt="Phone 5"
+              class="styled-image"
+            />
+            <h3>TITAN</h3>
+            <p>$12000.00</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+          <div class="product-item">
+            <img src="assests/image6.jpeg" alt="Phone 6" class="styled-image" />
+            <h3>TAG HEUER</h3>
+            <p>$25000.00</p>
+            <button class="add-to-cart">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login Form -->
+    <section class="loginsection">
+      <div class="watchesprand">
+        <div class="content-container">
+          <h2>Shop Now and Save Big</h2>
+          <p class="info">
+            🕰️ <strong>Limited-time sale</strong> on top brands like
+            <strong>Rolex, TAG Heuer, Casio,</strong> and more.
+          </p>
+          <p class="info">
+            💰 <strong>Enjoy discounts of up to 50% off.</strong>
+          </p>
+          <p class="highlight">⌚ Your Time, Your Style.</p>
+          <p class="subtext">
+            Don't just keep track of time — wear it with pride.
+          </p>
+          <a href="#formContainer">
+            <button class="shop-button">Shop Now</button></a
+          >
+        </div>
+      </div>
+      <div class="form-container" id="formContainer">
+        <form id="signupForm" class="formhidden">
+          <h2 class="h2login">Sign Up</h2>
+          <div class="form-group">
+            <label for="signupName">Name<span class="star">*</span></label>
+            <input type="text" id="signupName" placeholder="Enter your name" />
+            <span id="nameError" class="error"></span>
+          </div>
+          <div class="form-group">
+            <label for="signupEmail">Email<span class="star">*</span></label>
+            <input
+              type="email"
+              id="signupEmail"
+              placeholder="Enter your email"
+            />
+            <br />
+            <span id="emailError" class="error"></span>
+          </div>
+          <div class="form-group">
+            <label for="signupPassword"
+              >Password<span class="star">*</span></label
+            >
+            <input
+              type="password"
+              id="signupPassword"
+              placeholder="Enter your password"
+            />
+            <br />
+            <span id="passwordError" class="error"></span>
+          </div>
+          <button class="loginbutton" type="submit">Sign Up</button>
+
+          <button type="button" class="togglee-btn" id="toLogin">
+            Already have an account? Login
+          </button>
+        </form>
+        <!-- Login Form -->
+        <form id="loginForm">
+          <h2 class="h2login">Login</h2>
+          <div class="form-group">
+            <label for="loginEmail">Email <span class="star">*</span></label>
+            <input
+              type="email"
+              id="loginEmail"
+              placeholder="Enter your email"
+            />
+            <span id="loginEmailError" class="error"></span>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword"
+              >Password <span class="star">*</span></label
+            >
+            <input
+              type="password"
+              id="loginPassword"
+              placeholder="Enter your password"
+            />
+            <!-- <i class="fas fa-eye" id="togglePassword" style="cursor: pointer;"></i>   -->
+            <span id="loginPasswordError" class="error"></span>
+          </div>
+          <button class="loginbutton" type="submit">Login</button>
+          <button type="button" class="togglee-btn" id="toSignup">
+            Don't have an account? Sign Up
+          </button>
+        </form>
+      </div>
+    </section>
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="cart-modal hidden">
+      <div class="cart-container">
+        <h2 class="carth2">Place Order Cart</h2>
+        <ul class="cart-items"></ul>
+        <p class="close-cart"></p>
+        <ul class="orderplaced" id="cart-items-container"></ul>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2024 Max Watches. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>
